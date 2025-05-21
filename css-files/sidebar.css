@@ -1,0 +1,85 @@
+.sidebar {
+    will-change: transform;
+    position: sticky;
+    left: 10px;
+    top: 50vh;
+    transform: -50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999999;
+    padding: 10px 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 155px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.8), rgba(224, 86, 253, 0.8));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.circle i {
+    font-size: 10px;
+    transition: all 0.3s ease;
+}
+
+.circle::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(209, 175, 219);
+    background-color: transparent;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.circle:hover::after {
+    background-color: #9B59B6;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar:hover .circle::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.circle:hover {
+    width: 25px;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.6), rgba(255, 102, 204, 0.6));
+}
+
+.circle:hover i {
+    font-size: 14px;
+}

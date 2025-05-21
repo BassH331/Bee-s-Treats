@@ -1,0 +1,13 @@
+Changes and Modifications
+
+- the horizontal menu bar should be available even when the user scrolls down the page. This makes for easier navigation throught the entire page
+- Add the functionality to make the image clicked to apear in order.hhtml if users wants that exact cake. (Everything is on chtgpt)
+- Make the view function a bit more professional(like characaters in the selection in the start oof the game, but pop up style)
+- Add a section that will explain to user how they can easily use the site and get started(This should be part of thee design tpoo make it more intuitive)
+- Get online cakes and other cakes (made by oulady) and add them to the cake gallery
+- Add an "Our story section"
+- Fix details in contact us page
+
+								__Get feedback and add on to current changes and modifications__
+
+- Test the security of your website(Done after getting feedback and aming some alterations to the project)

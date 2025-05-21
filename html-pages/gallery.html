@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Cake Gallery - Bee's Treats</title>
+    <link rel="stylesheet" href="../css-files/styles.css">
+    <link rel="stylesheet" href="../css-files/gallery.css">
+    <link rel="stylesheet" href="../css-files/hero.css">
+    <link rel="stylesheet" href="../css-files/modal_view.css">
+    <link rel="stylesheet" href="../css-files/sidebar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bee's Treats</div>
+            <ul class="nav-items" id="nav-items">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <button class="menu-button">&#9776;</button> <!-- Hamburger icon -->
+                </a>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="gallery.html"><i class="fas fa-birthday-cake"></i> Cakes</a></li>
+                <li><a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <a href="#section1" class="circle" data-text="Birthday">
+                <i class="fas fa-birthday-cake"></i>
+            </a>
+            <a href="#section2" class="circle" data-text="Wedding">
+                <i class="fas fa-ring"></i>
+            </a>
+            <a href="#section3" class="circle" data-text="Anniversary">
+                <i class="fas fa-heart"></i>
+            </a>
+            <a href="#section4" class="circle" data-text="Cupcake">
+                <i class="fas fa-cookie-bite"></i> <!-- Alternative sweet treat icon -->
+            </a>
+            <a href="#section5" class="circle" data-text="Custom">
+                <i class="fas fa-palette"></i>
+            </a>
+        </div>
+        
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+         <!-- Cake Gallery Section -->
+         <section class="cake-gallery">          
+            
+            <section id="section1">
+            <div id="birthday-cakes" class="cake-category">
+                <h3>Birthday Cakes</h3>
+                <br><br>
+                
+                <!-- Repeat the cake-item structure for each image -->
+                <div class="cake-item">
+                    <img src="../images/cake17.jpg" alt="Birthday Cake 1" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <!-- Repeat the cake-item structure for each image -->
+                <div class="cake-item">
+                    <img src="../images/cake3.jpg" alt="Birthday Cake 3" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <!-- Repeat the cake-item structure for each image -->
+                <div class="cake-item">
+                    <img src="../images/cake4.jpg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <!-- Repeat the cake-item structure for each image -->
+                <div class="cake-item">
+                    <img src="../images/cake5.jpg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <!-- Repeat the cake-item structure for each image -->
+                <div class="cake-item">
+                    <img src="../images/cake8.jpg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <!-- Repeat the cake-item structure for each image -->
+                <div class="cake-item">
+                    <img src="../images/cake4.jpg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+                <!-- Repeat the cake-item structure for each image -->
+                <div class="cake-item">
+                    <img src="../images/cake12.jpg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+            </div>
+
+           <!-- Modal Structure -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content-container">
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="section2">
+            <div id="wedding-cakes" class="cake-category">
+                <h3>Wedding Cakes</h3>
+            </div>
+
+            <!-- Modal Structure -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content-container">
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+                </div>
+            </div>
+            
+
+            
+        </section>
+
+
+        <section id="section3">
+            <div id="anniversary-cakes" class="cake-category">
+                <h3>Anniversary Cakes</h3>
+                <div class="cake-item">
+                    <img src="../images/cake18.jpeg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+
+                <div class="cake-item">
+                    <img src="../images/cake19.jpeg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+
+                <div class="cake-item">
+                    <img src="../images/cake20.jpeg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Structure -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content-container">
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+                </div>
+            </div>
+            </section>
+
+            <section id="section4">
+            <div id="cupcakes" class="cake-category">
+                <h3>Cupcakes</h3>
+                <img src="../images/cupcake1.jpg" alt="Cupcake 1">
+                <img src="../images/cupcake2.jpg" alt="Cupcake 2">
+            </div>
+        </section>
+
+        <section id="section5">
+            <div id="custom-cakes" class="cake-category">
+                <h3>Custom Cakes</h3>
+                <div class="cake-item">
+                    <img src="../images/cake6.jpg" alt="Birthday Cake 4" class="clickable-image">
+                    <div class="overlay">
+                        <button class="view-btn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Bee's Trests. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+                <p>Contact us at <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../java-script/index_script.js"></script>
+    <script src="../java-script/modal_view.js"></script>
+</body>
+</html>
+

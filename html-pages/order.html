@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Bee's Treats</title>
+    <link rel="stylesheet" href="../css-files/styles.css">
+    <link rel="stylesheet" href="../css-files/order.css">
+    <link rel="stylesheet" href="../css-files/hero.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bee's Treats</div>
+            <ul class="nav-items" id="nav-items">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <button class="menu-button">&#9776;</button> <!-- Hamburger icon -->
+                </a>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="gallery.html"><i class="fas fa-birthday-cake"></i> Cakes</a></li>
+                <li><a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section of Page-->
+    <main>
+        <!-- Order Form Section -->
+        <section class="order-form">
+            <h2>Order Your Cake</h2>
+            <form action="../php-scripts/save_order.php" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                    <!-- Cake Category Selection -->
+                    <div class="form-group">
+                        <label for="cake-category">Cake Category</label>
+                        <select id="cake-category" name="cake_category">
+                            <option value="wedding">Wedding Cake</option>
+                            <option value="birthday">Birthday Cake</option>
+                            <option value="general">General Cake</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <!-- Cake Size Selection -->
+                    <label for="cake-size">Cake Size</label>
+                    <select id="cake-size" name="cake_size">
+                        <option value="15cm">Small (15 cm) –> Serves 6–8</option>
+                        <option value="18cm">Medium (20 cm) –> Serves 10–12</option>
+                        <option value="20cm">Large (25 cm) –> Serves 14–16</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="flavour">Cake Flavour</label>
+                    <select id="flavour" name="flavour">
+                        <option value="vanilla">Vanilla</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="red_velvet">Red Velvet</option>
+                        <option value="lemon_poppy">Lemon Poppy</option>
+                        <option value="carrot">Carrot Cake</option>
+                        <option value="cookies_cream">Cookies and Cream</option>
+                        <option value="strawberry">Strawberry</option>
+                        <option value="fruit">Fruit Cake</option>
+                        <option value="amarula">Amarula</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="frosting">Frosting Type</label>
+                    <select id="frosting" name="frosting">
+                        <option value="butter_cream">Butter Cream</option>
+                        <option value="cream_cheese">Cream Cheese</option>
+                        <option value="fresh_cream">Fresh Cream</option>
+                        <option value="fino_whip">Fino Whip</option>
+                        <option value="chocolate_ganache">Chocolate Ganache</option>
+                        <option value="fondant">Fondant</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cake-image">Upload Cake Design Image</label>
+                    <input type="file" id="cake-image" name="cake_image" accept="image/*">
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="design">Cake Design</label>
+                    <textarea id="design" name="design" placeholder="Enter design description (e.g., wedding, birthday)"></textarea>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery-date">When Do You Want It?</label>
+                    <input type="date" id="delivery-date" name="delivery_date">
+                </div>
+
+                <div class="form-group">
+                    <label for="pickup-delivery">Pick Up or Delivery?</label>
+                    <select id="pickup-delivery" name="pickup_delivery">
+                        <option value="pickup">Pick Up</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="delivery-options" style="display:none;">
+                    <label for="delivery-fee">Delivery Fee</label>
+                    <input type="text" id="delivery-fee" name="delivery_fee" value="To be paid via Uber" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="filling">Cake Filling</label>
+                    <select id="filling" name="filling">
+                        <option value="none">None</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="vanilla">Vanilla</option>
+                        <option value="fruit">Fruit</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cake-type">Cake Type</label>
+                    <select id="cake-type" name="cake_type">
+                        <option value="shifon">Shifon</option>
+                        <option value="sponge">Sponge</option>
+                        <option value="butter-cake">Butter Cake</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="button">Submit Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Bee's Trests. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <p>Contact us at <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../java-script/order.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-storage.js"></script>
+
+
+    <script src="../java-script/index_script.js"></script>
+    <script>
+        // Show delivery options if 'Delivery' is selected
+        document.getElementById("pickup-delivery").addEventListener("change", function() {
+            const deliveryOptions = document.getElementById("delivery-options");
+            if (this.value === "delivery") {
+                deliveryOptions.style.display = "block";
+            } else {
+                deliveryOptions.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
+

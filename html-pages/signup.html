@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee's Treats</title>
+    <link rel="stylesheet" href="../css-files/styles.css">
+    <link rel="stylesheet" href="../css-files/sign-up.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bee's Treats</div>
+            <ul class="nav-items" id="nav-items">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <button class="menu-button">&#9776;</button> <!-- Hamburger icon -->
+                </a>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="gallery.html"><i class="fas fa-birthday-cake"></i> Cakes</a></li>
+                <li><a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sign-Up Form -->
+        <div id="signup" class="signup-form-container">
+            <h2>Sign Up</h2>
+            <form id="signup-form" action="../php-scripts/save_signup.php" method="POST">
+
+            <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required placeholder="Enter your surname">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Create a password">
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <div id="form-response"></div>
+        </div>
+
+    </main>
+</body>
+<footer>
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Bee's Trests. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <p>Contact us at <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="../java-script/index_script.js"></script>
+<script type="module" src="../java-script/signup.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"></script>
+
+</html>
+

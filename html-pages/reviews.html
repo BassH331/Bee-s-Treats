@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Bee's Treats - Reviews</title>
+    <link rel="stylesheet" href="../css-files/styles.css">
+    <link rel="stylesheet" href="../css-files/hero.css">
+    <link rel="stylesheet" href="../css-files/get_in_touch.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bee's Treats</div>
+            <ul class="nav-items" id="nav-items">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <button class="menu-button">&#9776;</button> <!-- Hamburger icon -->
+                </a>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="gallery.html"><i class="fas fa-birthday-cake"></i> Cakes</a></li>
+                <li><a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Customer Reviews</h1>
+                <p class="hero-subtitle">See what our happy customers have to say about our delicious cakes!</p>
+            </div>
+        </div>
+        
+        <form action="../php-scripts/submit_review.php" method="POST">
+            <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
+            <input type="hidden" name="order_id" value="1"> <!-- Replace with actual order ID -->
+            <label for="review">Your Review:</label>
+            <textarea name="review" id="review" required></textarea>
+            <label for="rating">Rating (1-5):</label>
+            <select name="rating" id="rating" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button type="submit">Submit Review</button>
+        </form> 
+
+        <section class="call-to-action" style="text-align: center; padding: 3rem 2rem; background-color: #ffffff;">
+            <h2 style="font-family: 'Sail', sans-serif; font-size: 2.5rem; font-weight: bold; color: #7e164a; margin-bottom: 1rem;">
+              Ready to Order Your Perfect Cake?
+            </h2>
+            <p style="font-family: 'Julius Sans One', sans-serif; font-size: 1.25rem; color: #333;">
+              Our cakes are waiting to make your celebrations unforgettable. Order today and experience the magic!
+            </p>
+            <a href="order.html" style="text-decoration: none;">
+                <button class="hero-button">Order Now</button>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Bee's Trests. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+                <p>Contact us at <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navItems = document.getElementById("nav-items");
+            if (navItems.style.display === "block") {
+                navItems.style.display = "none";
+            } else {
+                navItems.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
