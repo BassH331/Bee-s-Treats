@@ -31,96 +31,13 @@
 
     
     <main>
-        <div class="sidebar">
-            <a href="#section1" class="circle" data-text="Get in Touch"></a>
-            <a href="#section2" class="circle" data-text="Send Message"></a>
-        </div>
-        
-        <style>
-            .sidebar {
-        position: sticky;
-        left: 10px;
-        top: 50%;
-        margin-top: -180px;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        z-index: 2;
-        padding: 10px 5px;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 50px;
-        transition: width 0.3s ease;
-        overflow: hidden; /* Ensure no overflow when not hovered */
-        }
-    
-        .sidebar:hover {
-            width: 155px; /* Sidebar expands on hover */
-        }
-    
-        .circle {
-            width: 20px;
-            height: 20px;
-            background: linear-gradient(135deg, rgba(155, 89, 182, 0.8), rgba(224, 86, 253, 0.8));
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            margin-left: 15px;
-            white-space: nowrap;
-        }
-    
-        .circle::after {
-        content: attr(data-text);
-        position: absolute;
-        left: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: rgb(209, 175, 219);
-        background-color: transparent; /* Default transparent background */
-        font-size: 14px;
-        padding: 5px 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        white-space: nowrap;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-    
-    .circle:hover::after {
-        background-color: #9B59B6; /* Purple background when hovered */
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    
-        .sidebar:hover .circle::after {
-            opacity: 1;
-            visibility: visible;
-        }
-    
-        .circle:hover {
-            width: 25px;
-            height: 40px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, rgba(142, 68, 173, 0.6), rgba(255, 102, 204, 0.6));
-        }
-    
-        </style>
-        <!--Hero section that will explaint the contact page-->
-        <div class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Do have any queries or would you like to contact us directly?</h1>
-                <p class="hero-subtitle">You can get in touch with us by using any of the following ways listed below. Dont hesitate to give us feedback or any customer reviews in terms of our services. Much Appreciated</p>
+        <div class="move_up_hero-section">
+            <!--Hero section that will explaint the contact page-->
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Do have any queries or would you like to contact us directly?</h1>
+                    <p class="hero-subtitle">You can get in touch with us by using any of the following ways listed below. Dont hesitate to give us feedback or any customer reviews in terms of our services. Much Appreciated</p>
+                </div>
             </div>
         </div>
 

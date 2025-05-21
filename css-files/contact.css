@@ -10,9 +10,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 80px;
+    
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.600);
+}
+
+.move_up_hero-section {
+    margin-top: 60px;
 }
 
 .contact-details,
